@@ -10,23 +10,23 @@ namespace OtelHoca.UI.Common
     {
 
 
-        public static bool isEmpty(this string text)
+        public static bool BosVarmi(this string text)
         {
             return (string.IsNullOrEmpty(text));
         }
 
 
-        public static bool isNumber(this string text)
+        public static bool NumaraVarmi(this string text)
         {
             return (text.Any(Char.IsDigit));
         }
 
-        public static bool isTcIncorrect(this string text)
+        public static bool TcDogruMu(this string text)
         {
             return (text.Length != 11);
         }
 
-        public static bool isTelNoIncorrect(this string text)
+        public static bool TelefonNoDogruMu(this string text)
         {
             return (text.Length != 14);
         }

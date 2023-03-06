@@ -143,22 +143,22 @@ namespace OtelHoca.UI
 
         private bool ValidationControl()
         {
-            if (txtAdSoyad.Text.isEmpty() || mtxtTcNo.Text.isEmpty() || mTxtTelNo.Text.isEmpty())
+            if (txtAdSoyad.Text.BosVarmi() || mtxtTcNo.Text.BosVarmi() || mTxtTelNo.Text.BosVarmi())
             {
                 MessageBox.Show("Bos deger girilemez!");
                 return false;
             };
-            if (txtAdSoyad.Text.isNumber())
+            if (txtAdSoyad.Text.NumaraVarmi())
             {
                 MessageBox.Show("Ad Soyad kisminda numara olamaz!");
                 return false;
             }
-            if (mtxtTcNo.Text.isTcIncorrect())
+            if (mtxtTcNo.Text.TcDogruMu())
             {
                 MessageBox.Show("TC Kimlik numarasi 11 haneli olmak zorundadir.");
                 return false;
             }
-            if (mTxtTelNo.Text.isTelNoIncorrect())
+            if (mTxtTelNo.Text.TelefonNoDogruMu())
             {
                 MessageBox.Show("Telefon numaranizi eksik girdiniz.");
                 return false;
